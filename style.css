@@ -1,0 +1,48 @@
+body {
+    background-image: url("http://imgur.com/UbbFBTU.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+h1{
+	color: #E6E21C;
+	text-align: center;
+	font-family: Georgia;
+	font-style: bold;
+	width: 400px;
+	padding: 5px;
+	border-radius: 10px;
+	margin:20px auto;
+	background: rgba(56,181,179,.3);
+}
+
+.submit {
+	text-align: center;
+}
+
+.buttons {
+	text-align: center;
+	margin-top: 30px;
+}
+
+.guess-field {
+	color: #E6E21C;
+	width:275px;
+	padding:20px;
+	border-radius: 10px;
+	margin:0px auto;
+	background: rgba(37,153,168,.3);
+}
+
+.btn {
+	text-align: center;
+	border-radius: 15px;
+	color: #E6E21C;
+	font-size: 16px;
+	font-weight: bold;
+	height: 50px;
+	width: 180px;
+	padding: 0px;
+	margin: 10px;
+	background-color: rgba(6,109,161,1);
+}

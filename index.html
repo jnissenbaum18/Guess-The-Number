@@ -9,6 +9,7 @@
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href='style.css' rel='stylesheet'/>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -18,13 +19,18 @@
     <![endif]-->
   </head>
   <body>
-    <h1>Guess the number!</h1>
-    <form>
-      Guess: <input type="text" name="guess">
-      <input type="submit" value="Submit Your Guess">
-    </form>
-    <button type="button">Play again?</button>
-    <button type="button">Would you like a hint?</button>
+    <h1>Guess The Number</h1>
+    <div class='guess-field'>
+      <div class='submit'>  
+        <h2>Your Guess:</h2>
+        <input type="text" name="guess" placeholder="Put your guess here">
+        <input type="submit" value="Submit Your Guess" class="btn">
+      </div>
+    </div>
+    <div class='buttons'>
+        <button type="button" class="btn">Play again?</button>
+        <button type="button" class="btn">Would you like a hint?</button>
+    </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
