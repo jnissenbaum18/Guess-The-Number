@@ -9,15 +9,19 @@ h1{
 	text-align: center;
 	font-family: Georgia;
 	font-style: bold;
-	width: 400px;
+	width: 450px;
 	padding: 5px;
 	border-radius: 10px;
 	margin:20px auto;
 	background: rgba(56,181,179,.3);
 }
 
-.submit {
-	text-align: center;
+.test {
+	color: white;
+}
+
+.inputField {
+	margin: 10px;
 }
 
 .buttons {
@@ -25,8 +29,10 @@ h1{
 	margin-top: 30px;
 }
 
-.guess-field {
+.guessField {
+	text-align: center;
 	color: #E6E21C;
+	/*color: black;*/
 	width:275px;
 	padding:20px;
 	border-radius: 10px;
@@ -46,3 +52,4 @@ h1{
 	margin: 10px;
 	background-color: rgba(6,109,161,1);
 }
+
