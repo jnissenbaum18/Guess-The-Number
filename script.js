@@ -1,12 +1,9 @@
-function sayHello() {
-    document.getElementById('result').value = "hello"
-}
+// Guess The Number JS File
 
 var secretNumber = 0
 var guess = 0
 var count = 7
 var guesses = []
-var previous = false
 
 inputGuess = function () {
     // takes the user guess
@@ -14,12 +11,11 @@ inputGuess = function () {
 }
 
 range100 = function () {
-    // generates a random number
+    // generates a random number as well as resets all parameters and fields
     secretNumber = Math.floor(Math.random() * (100 - 1) + 1)
     count = 7
     guesses = []
     guess = 0
-    previous = false
     document.getElementById('guess').value = null
     document.getElementById('message').innerHTML = "New Game!"
     document.getElementById('result').value = null
@@ -40,9 +36,6 @@ guessCounter = function () {
         previous = false
         return true
     }
-    else if (tracker > 0 && count > 0) {
-        previous = true
-    }
     else {
         return false
     }
@@ -50,15 +43,16 @@ guessCounter = function () {
 
 temperature = function () {
     //tells if the guess was hot or cold
-        if (Math.abs(guesses[guesses.length - 2] - secretNumber) > Math.abs(guess - secretNumber)) {
-            return 'Hotter'
-        }
-        else {
-            return 'Colder'
-        }
+    if (Math.abs(guesses[guesses.length - 2] - secretNumber) > Math.abs(guess - secretNumber)) {
+        return 'Hotter'
+    }
+    else {
+        return 'Colder'
+    }
 }
 
 showNumber = function () {
+    // Displays the secret number
 	document.getElementById('result').value = secretNumber
 }
 
@@ -84,7 +78,7 @@ master = function () {
                 document.getElementById('message').innerHTML = 'Correct!'
             }
         }
-        else if (previous) {
+        else if (guessCounter() === false) {
             document.getElementById('message').innerHTML = 'Sorry that was a previous guess, please try again'
         }
         else {
