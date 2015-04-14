@@ -7,17 +7,19 @@
 	</head>
 
 	<body>
+        <div id='test'>hi</div>
 		<h1>Guess The Number</h1>
     	<div class='guessField' id='guessField'> 
         	<h2>Your Guess:</h2>
         		<form name="guessForm" id='guessForm'>
-        			<input class='inputField' type="text" id="guess" placeholder="Put your guess here" onkeydown="if (event.keyCode == 13) {master(); return false;}"/> <br>
-        			<input class='inputField' type="text" id="result" placeholder='The secret number'/> <br>
-        			<input class='inputField' type="text" id="guesses" placeholder='Your guesses'/> <br>
+                    <div class='previousGuesses' id='previousGuesses'></div>
+        			<input id="guess" class='inputField' type="text"  placeholder="Put your guess here" onkeydown="if (event.keyCode == 13) {master(); return false;}"/> <br>
+        			<input class='inputField' type="text" id="result" placeholder='The secret number'/> <br> 
         			<input type="button" value="Submit Your Guess" class="btn" onclick="master()" />
         		</form>
         	<div id='message'>New Game!</div>
     	</div>
+        <div class='previousGuesses' id='previousGuesses'></div>
     	<div class='buttons'>
         	<button type="button" class="btn" onclick='range100()'>Play again?</button>
         	<button type="button" class="btn" onclick='showNumber()'>Would you like a hint?</button>

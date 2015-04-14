@@ -12,8 +12,11 @@ h1{
 	width: 450px;
 	padding: 5px;
 	border-radius: 10px;
-	margin:20px auto;
+	margin:10px auto;
 	background: rgba(56,181,179,.3);
+}
+h2 {
+	margin: 5px;
 }
 
 .test {
@@ -21,7 +24,8 @@ h1{
 }
 
 .inputField {
-	margin: 10px;
+	margin: 25px;
+	float: left;
 }
 
 .buttons {
@@ -33,11 +37,16 @@ h1{
 	text-align: center;
 	color: #E6E21C;
 	/*color: black;*/
-	width:275px;
+	width:300px;
+	height:290px;
 	padding:20px;
 	border-radius: 10px;
 	margin:0px auto;
 	background: rgba(37,153,168,.3);
+}
+
+.previousGuesses {
+	float: right;
 }
 
 .btn {
@@ -49,7 +58,25 @@ h1{
 	height: 50px;
 	width: 180px;
 	padding: 0px;
-	margin: 10px;
+	margin: 15px;
 	background-color: rgba(6,109,161,1);
+}
+
+.colder {
+	color: rgba(25,218,218,1);
+	font-weight: bold;
+	margin: 2px;
+	font-size: 16px;
+}
+
+.hotter {
+	color: rgba(260,60,60,1);
+	font-weight: bold;
+	margin: 2px;
+	font-size: 16px;
+}
+
+#message {
+	margin: 10px;
 }
 

@@ -5,9 +5,15 @@ var guess = 0
 var count = 7
 var guesses = []
 
+
+
 inputGuess = function () {
     // takes the user guess
     guess = document.getElementById('guess').value
+}
+
+rangeInitial = function () {
+    secretNumber = Math.floor(Math.random() * (100 - 1) + 1)
 }
 
 range100 = function () {
@@ -15,11 +21,12 @@ range100 = function () {
     secretNumber = Math.floor(Math.random() * (100 - 1) + 1)
     count = 7
     guesses = []
-    guess = 0
-    document.getElementById('guess').value = null
+    guess = 0 
+    document.getElementById('guess').value = ''
     document.getElementById('message').innerHTML = "New Game!"
+    document.getElementById('previousGuesses').innerHTML = ''
     document.getElementById('result').value = null
-    document.getElementById('guesses').value = null
+    document.getElementById('guessField').style.background = 'rgba(37,153,168,.3)'
 }
 
 guessCounter = function () {
@@ -44,10 +51,10 @@ guessCounter = function () {
 temperature = function () {
     //tells if the guess was hot or cold
     if (Math.abs(guesses[guesses.length - 2] - secretNumber) > Math.abs(guess - secretNumber)) {
-        return 'Hotter'
+        return 'hotter'
     }
     else {
-        return 'Colder'
+        return 'colder'
     }
 }
 
@@ -66,15 +73,17 @@ master = function () {
     }
     else if (guess > 0 && guess < 101) {
         if (guessCounter()) {
-        	document.getElementById('guesses').value = guesses
             document.getElementById('message').innerHTML = "Remaining Guesses is " + count + ' ' + '<br>'
             if (guess < secretNumber) {
-            	document.getElementById('message').innerHTML += temperature() + ' and Higher'
+            	document.getElementById('message').innerHTML += temperature() + ' and higher'
+                document.getElementById('previousGuesses').innerHTML += '<div class='+temperature()+'>'+guess+' '+temperature()+' '+'higher'+'<br>'+'</div>'
             }
             else if (guess > secretNumber) {
-                document.getElementById('message').innerHTML += temperature() + ' and Lower'
+                document.getElementById('message').innerHTML += temperature() + ' and lower'
+                document.getElementById('previousGuesses').innerHTML += '<div class='+temperature()+'>'+guess+' '+temperature()+' '+'lower'+'<br>'+'</div>'
             }
             else {
+                document.getElementById('guessField').style.background = 'rgba(255,0,0,.5)'
                 document.getElementById('message').innerHTML = 'Correct!'
             }
         }
@@ -91,4 +100,4 @@ master = function () {
     }
 }
 
-range100()
+rangeInitial()
